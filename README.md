@@ -13,10 +13,10 @@ The library dependencies should be quite clear, I am using pyarrow. I am not
 	* collecting the data from the repository base
 	* gathering and massaging the data into a dataframe 
 	* save the dataframe under /data/df.csv (one has to run get-data-....py to generate the full file).
-	* > python3 get-data-from-unibielefeld.py > load-output.log
+	* > python3 get-data-from-unibielefeld.py > logs/load-output.log
 * pyspark-script.py
 	* this it the script using pyspark
-	* > time pyspark < pyspark-script.py > spark-output.log
+	* > time pyspark < pyspark-script.py > logs/spark-output.log
 *  output.txt
 	* my script output
 * requirements	

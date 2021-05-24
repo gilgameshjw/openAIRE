@@ -36,15 +36,9 @@ while True:
     time.sleep(t_wait)
 
 
-
 # Process data
-
 ks_data = ['identifier','timestamp','authors','orci_authors','title','subject_list','typology']
 
-#processed_data = []
-#for i in tqdm.tqdm(range(len(data_total))):
-#    d = data_total[i]
-#    processed_data.append(utils.get_data_dict(d, ks_data))
 processed_data = [utils.get_data_dict(data_total[i], ks_data)
                   for i in tqdm.tqdm(range(len(data_total)))]
 
