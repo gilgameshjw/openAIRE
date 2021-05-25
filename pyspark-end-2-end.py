@@ -39,9 +39,7 @@ o = xmltodict.parse(r.content)
 data = o['OAI-PMH']['ListRecords']['record'] 
 r_token = o['OAI-PMH']['ListRecords']['resumptionToken']['#text']
 tmp_data = [utils.get_data_dict(d, ks_data) for d in data]
-#df = spark.createDataFrame([[d[k] for k in ks_data] for d in tmp_data], 
-#                            ks_data)
-#tmp_data = []
+
 df = None
 
 # Loop over all the data as long as resumption token found...
