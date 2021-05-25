@@ -9,6 +9,10 @@ The library dependencies should be quite clear, I am using pyarrow. I am not
 
 * utils.py 
 	* utilities to massage the XML data via brute force
+* pyspark-end-2-end.py
+    * end to end computation loading using pyspark and answers
+    * > time pyspark < pyspark-end-2-end.py > logs/end-2-end-output.log
+    * output: logs/end-2-end-output.log
 * get-data-from-unibielefeld.py 
 	* collecting the data from the repository base
 	* gathering and massaging the data into a dataframe 
@@ -17,7 +21,7 @@ The library dependencies should be quite clear, I am using pyarrow. I am not
 * pyspark-script.py
 	* this it the script using pyspark
 	* > time pyspark < pyspark-script.py > logs/spark-output.log
-*  output.txt
-	* my script output
+*  logs
+	* script outputs
 * requirements	
 	* as generated with pip freeze. My main lib unfiltered, even though I am using conda usually...

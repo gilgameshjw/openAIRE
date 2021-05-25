@@ -7,7 +7,7 @@ def get_identifier(d):
     return d['header']['identifier']
 
 def get_timestamps(d):
-    return d['metadata']['resource']['dates']['date'][0]['#text'][:4] 
+    return int(d['metadata']['resource']['dates']['date'][0]['#text'][:4])
 
 def get_title(d):
     if type(d['metadata']['resource']['titles']['title'])!=list:
@@ -22,22 +22,23 @@ def get_subjects(d):
         return []
     
 def get_orci_authors(d):
-    if type(d['metadata']['resource']['creators']['creator']) == list:
+    creator = d['metadata']['resource']['creators']['creator']
+    if type(creator) == list:
         return ['orcid:'+c['nameIdentifier']['#text'].lower() 
-                for c in d['metadata']['resource']['creators']['creator'] if c.get('nameIdentifier', False)]
+                for c in creator if c.get('nameIdentifier', False)]
     else:
-        return ['orcid:'+d['metadata']['resource']['creators']['creator']['nameIdentifier']['#text'].lower()] \
-            if d['metadata']['resource']['creators']['creator'].get('nameIdentifier', False) else []
+        return ['orcid:'+creator['nameIdentifier']['#text'].lower()] \
+            if creator.get('nameIdentifier', False) else ['']
                  
 def get_authors(d):
+    creator = d['metadata']['resource']['creators']['creator']
     if type(d['metadata']['resource']['creators']['creator']) == list:
-        return [c['givenName'].lower()+' '+c['familyName'].lower() for c in
-                d['metadata']['resource']['creators']['creator']]
+        return [c['givenName'].lower()+' '+c['familyName'].lower() for c in creator]
     else:
-        return [d['metadata']['resource']['creators']['creator']['givenName'].lower()+' '+d['metadata']['resource']['creators']['creator']['familyName'].lower()]
+        return [creator['givenName'].lower()+' '+creator['familyName'].lower()]
 
 def get_typology(d):
-    return d['header']['setSpec']
+    return d['header']['setSpec'][0]
 
 def get_data(d, label):
     try: 
@@ -56,7 +57,12 @@ def get_data(d, label):
         elif label=='typology':
             return get_typology(d)
     except:
-        return 'error::'+label
+        if label != 'subject_list':
+            print('error::'+label)
+        if label in ['authors','orci_authors']:
+            return ['error::'+label]
+        else:
+            return 'error::'+label
 
     
 def get_data_dict(d, ks_data):    

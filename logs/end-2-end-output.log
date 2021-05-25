@@ -1,0 +1,208 @@
+1000
+2000
+3000
+4000
+error::authors
+error::orci_authors
+5000
+6000
+7000
+8000
+9000
+10000
+11000
+12000
+13000
+14000
+15000
+16000
+17000
+18000
+error::authors
+error::orci_authors
+19000
+20000
+21000
+error::authors
+error::orci_authors
+error::authors
+error::orci_authors
+22000
+23000
+24000
+25000
+26000
+27000
+28000
+29000
+30000
+31000
+32000
+33000
+34000
+35000
+36000
+37000
+38000
+39000
+40000
+41000
+42000
+43000
+44000
+45000
+46000
+47000
+48000
+49000
+50000
+51000
+52000
+53000
+54000
+55000
+56000
+57000
+58000
+59000
+60000
+61000
+62000
+63000
+64000
+65000
+error::authors
+error::orci_authors
+error::authors
+error::orci_authors
+error::authors
+error::orci_authors
+66000
+67000
+68000
+69000
+70000
+71000
+72000
+error::authors
+error::orci_authors
+73000
+error::authors
+error::orci_authors
+74000
+error::authors
+error::orci_authors
+error::authors
+error::orci_authors
+********** data loaded **********
++--------------------+---------+--------------------+--------------------+---------------+
+|          identifier|timestamp|             authors|        orci_authors|       typology|
++--------------------+---------+--------------------+--------------------+---------------+
+|oai:pub.uni-biele...|     2010|[herwig birg, e.-...|                  []|journal_article|
+|oai:pub.uni-biele...|     2010|[vladimir i. boga...|                  []|journal_article|
+|oai:pub.uni-biele...|     2010|  [gernot horstmann]|[orcid:0000-0002-...|journal_article|
+|oai:pub.uni-biele...|     2010|[ov popova, sf is...|                  []|journal_article|
+|oai:pub.uni-biele...|     2010|[b hantke, c lahm...|                  []|journal_article|
+|oai:pub.uni-biele...|     2010|[patrick c. mcgui...|[orcid:0000-0001-...|journal_article|
+|oai:pub.uni-biele...|     2010|[u fock, horst hi...|                  []|journal_article|
+|oai:pub.uni-biele...|     2010|[r basler, g chab...|[orcid:0000-0003-...|journal_article|
+|oai:pub.uni-biele...|     2010|[paul lescot, mic...|                  []|journal_article|
+|oai:pub.uni-biele...|     2010|[a becker, farhad...|                  []|journal_article|
+|oai:pub.uni-biele...|     2010|[volker böhm, jan...|                  []|journal_article|
+|oai:pub.uni-biele...|     2010|[d sudfeld, k woj...|[orcid:0000-0002-...|     conference|
+|oai:pub.uni-biele...|     2010|[jörg schotter, p...|[orcid:0000-0003-...|     conference|
+|oai:pub.uni-biele...|     2010|[ekkehard diemann...|[orcid:0000-0003-...|journal_article|
+|oai:pub.uni-biele...|     2010|[claus-jochen haa...|                  []|journal_article|
+|oai:pub.uni-biele...|     2010|[dortje golldack,...|                  []|journal_article|
+|oai:pub.uni-biele...|     2010|[a bielanski, a m...|[orcid:0000-0003-...|journal_article|
+|oai:pub.uni-biele...|     2010|       [thomas zink]|                  []|journal_article|
+|oai:pub.uni-biele...|     2010|[andreas tauch, s...|[orcid:0000-0003-...|journal_article|
+|oai:pub.uni-biele...|     2010|[r gheorghe, mari...|[orcid:0000-0003-...|journal_article|
++--------------------+---------+--------------------+--------------------+---------------+
+only showing top 20 rows
+
+df count total:  74284
+The number of records per publication year:
+************************************************************
++---------+-----+
+|timestamp|count|
++---------+-----+
+|     2002|   17|
+|     2003|  299|
+|     2004|  134|
+|     2005|  110|
+|     2006|  116|
+|     2007|  125|
+|     2008|  111|
+|     2009|  103|
+|     2010|10287|
+|     2011|12113|
+|     2012| 4894|
+|     2013| 5060|
+|     2014| 3417|
+|     2015| 4146|
+|     2016| 6307|
+|     2017| 7027|
+|     2018| 7526|
+|     2019| 4314|
+|     2020| 4916|
+|     2021| 3262|
++---------+-----+
+
+The number of records per typology:
+************************************************************
++--------------------+-----+
+|            typology|count|
++--------------------+-----+
+|  bi_bachelor_thesis|   17|
+|     bi_dissertation| 2219|
+|    bi_master_thesis|   80|
+|   bi_postdoc_thesis|   12|
+|           blog_post|  116|
+|                book| 2203|
+|        book_chapter|14099|
+|         book_editor| 1842|
+|          conference| 6361|
+| conference_abstract| 2530|
+|   conference_editor|  169|
+|        dissertation| 3465|
+|encyclopedia_article|  810|
+|     journal_article|34241|
+|      journal_editor|  354|
+|   newspaper_article|  563|
+|              patent|   94|
+|            preprint|  444|
+|              report|  866|
+|       research_data|  355|
++--------------------+-----+
+only showing top 20 rows
+
+Number of records per author:
+************************************************************
+('helge ritter', 571)
+('alfred pühler', 566)
+('hans-ulrich wehler', 557)
+('thomas schack', 546)
+('franz-xaver kaufmann', 524)
+('achim müller', 521)
+('hans-georg stammler', 500)
+('stefan kühl', 429)
+('oliver razum', 410)
+Number of records per ORCI author:
+************************************************************
+('orcid:0000-0003-4723-2960', 560)
+('orcid:0000-0003-0117-4021', 520)
+('orcid:0000-0002-0309-2655', 393)
+('orcid:0000-0002-0918-5940', 365)
+('orcid:0000-0001-8866-7704', 357)
+('orcid:0000-0003-2774-7860', 355)
+('orcid:0000-0002-8275-525x', 349)
+('orcid:0000-0002-4786-5189', 332)
+('orcid:0000-0001-7975-4363', 317)
+The number of Journal Articles produced since 1985, grouped by intervals of 5 years:
+************************************************************
+('2000<=y<=2005', 560)
+('2005<=y<=2010', 10742)
+('2010<=y<=2015', 29630)
+('2015<=y<=2020', 30090)
+('2020<=y<=2025', 3262)
